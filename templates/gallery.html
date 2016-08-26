@@ -1,0 +1,12 @@
+<h2 class="text-center shimmer"> Our Gallery of Cards </h2>
+<input class="search" placeholder="Find Your Card" ng-model="gCtrl.cardFilter">
+<br>
+<div class="card myrtle" ng-repeat="card in gCtrl.cards | filter:gCtrl.cardFilter">
+    <div class ="shimmer">
+        <h3 class="name">{{card.name}}</h3>
+        <img class="image" ng-src="{{card.art}}"/>
+        <h4 class="text"> Super Power: {{card.superPower}} </h4>
+        <h4 class="text">Toughness: {{card.toughness}} </h4>
+        <h4 class="text">Power: {{card.power}}</h4>
+    </div>
+</div>
